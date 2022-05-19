@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Ciekawostki o kotach</h1>
+  <div
+    class="infinite-scroll"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollUpDistance]="1.5"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="onScrollDown()">
+    <mat-card *ngFor="let fact of catFacts; trackBy: trackByFn">
+      {{fact}}
+    </mat-card>
+  </div>
+</div>

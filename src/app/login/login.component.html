@@ -1,0 +1,17 @@
+<form class="container" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+  <mat-card>
+    <h1>Logowanie</h1>
+    <mat-form-field appearance="outline">
+      <mat-label >Login</mat-label>
+      <input matInput type="text" required formControlName="login" autocomplete="off">
+      <mat-error *ngIf="loginForm.controls['login'].hasError('required')">Pole jest wymagane</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Hasło</mat-label>
+      <input matInput type="password" required formControlName="password">
+      <mat-error *ngIf="loginForm.controls['password'].hasError('required')">Pole jest wymagane</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary">Zatwiedź</button>
+  </mat-card>
+
+</form>

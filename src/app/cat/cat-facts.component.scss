@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #93d5ff;
+  padding: 50px;
+  min-height: 100vh;
+  .infinite-scroll {
+    mat-card {
+      padding: 35px;
+      margin: 20px;
+      max-width: 400px;
+    }
+  }
+}
